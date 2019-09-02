@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { darken } from 'polished';
 
 export const Container = styled.div`
@@ -26,6 +27,25 @@ export const Container = styled.div`
         background: ${darken(0.03, '#7159c1')};
       }
     }
+  }
+`;
+
+export const EmptyCart = styled.div`
+  padding: 50px;
+  background: #fff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+
+  span {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #191920;
   }
 `;
 
@@ -92,5 +112,19 @@ export const Total = styled.div`
   strong {
     font-size: 28px;
     margin-left: 5px;
+  }
+`;
+
+export const ButtonBuy = styled(Link)`
+  background: #7159c1;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s;
+
+  &:hover {
+    background: ${darken(0.03, '#7159c1')};
   }
 `;
