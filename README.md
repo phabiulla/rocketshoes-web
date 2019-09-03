@@ -3,9 +3,11 @@ Aplicação feita utilizando #reactjs, que implementa o fluxo de carrinho de com
 Durante os estudos, tive meu primeiro contato com os conceitos de #redux e #saga, além de conhecer novas
 ferramentas que auxiliam no dia a dia de um DEV.. como é o caso do #reactotron e do #jsonserver.
 
-![alt text](https://user-images.githubusercontent.com/22889383/64163683-9df44580-ce39-11e9-8962-f728ddd9e074.PNG)
-![alt text](https://user-images.githubusercontent.com/22889383/64163685-9e8cdc00-ce39-11e9-8d7e-ced62e8c0b18.PNG)
-![alt text](https://user-images.githubusercontent.com/22889383/64163686-9e8cdc00-ce39-11e9-8350-c0a59d7d6300.PNG)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/22889383/64163683-9df44580-ce39-11e9-8962-f728ddd9e074.PNG" width="350">
+  <img src="https://user-images.githubusercontent.com/22889383/64163685-9e8cdc00-ce39-11e9-8d7e-ced62e8c0b18.PNG" width="350">
+   <img src="https://user-images.githubusercontent.com/22889383/64163686-9e8cdc00-ce39-11e9-8350-c0a59d7d6300.PNG" width="350">
+</p>
 
 # Clone
 
