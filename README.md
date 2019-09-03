@@ -1,7 +1,7 @@
 # rocketshoes-web
-Aplicação feita utilizando #reactjs, que implementa o fluxo de carrinho de compras de um e-commerce. 
-Durante os estudos, tive meu primeiro contato com os conceitos de #redux e #saga, além de conhecer novas
-ferramentas que auxiliam no dia a dia de um DEV.. como é o caso do #reactotron e do #jsonserver.
+Aplicação feita utilizando #ReactJS e implementa o fluxo de carrinho de compras de um e-commerce. 
+Durante os estudos, tive meu primeiro contato com os conceitos de #Redux e #Saga, além de conhecer 
+novas ferramentas que auxiliam no dia a dia de um DEV.. como é o caso do #Reactotron e do #JsonServer.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/22889383/64163683-9df44580-ce39-11e9-8962-f728ddd9e074.PNG" width="350">
