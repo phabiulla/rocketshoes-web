@@ -123,6 +123,7 @@ export const ButtonBuy = styled(Link)`
   color: #fff;
   text-decoration: none;
   transition: background 0.2s;
+  text-transform: uppercase;
 
   &:hover {
     background: ${darken(0.03, '#7159c1')};

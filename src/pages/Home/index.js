@@ -5,12 +5,13 @@ import { MdAddShoppingCart } from 'react-icons/md';
 import api from '../../services/api';
 import { formatPrice } from '../../util/format';
 
-import { ProductList } from './styles';
+import { ProductList, Spinner } from './styles';
 import * as CartActions from '../../store/modules/cart/actions';
 
 class Home extends Component {
   state = {
     products: [],
+    loading: true,
   };
 
   async componentDidMount() {
@@ -18,41 +19,58 @@ class Home extends Component {
     const data = response.data.map(product => ({
       ...product,
       priceFormatted: formatPrice(product.price),
+      loadingAddCart: false,
     }));
 
-    this.setState({ products: data });
+    this.setState({ products: data, loading: false });
   }
 
-  handleAddProduct = id => {
+  handleAddProduct = product => {
+    const items = this.state.products;
+    const index = this.state.products.indexOf(product);
+    items[index].loadingAddCart = true;
+
+    this.setState({ products: items });
+
     const { addToCartRequest } = this.props;
-    addToCartRequest(id);
+    addToCartRequest(product.id);
   };
 
   render() {
-    const { products } = this.state;
+    const { products, loading } = this.state;
     const { amount } = this.props;
 
     return (
-      <ProductList>
-        {products.map(product => (
-          <li key={product.id}>
-            <img src={product.image} alt={product.title} />
-            <strong>{product.title}</strong>
-            <span>{product.priceFormatted}</span>
+      <>
+        {loading ? (
+          <Spinner color="#7159c1" size={36} />
+        ) : (
+          <ProductList>
+            {products.map(product => (
+              <li key={product.id}>
+                <img src={product.image} alt={product.title} />
+                <strong>{product.title}</strong>
+                <span>{product.priceFormatted}</span>
 
-            <button
-              type="button"
-              onClick={() => this.handleAddProduct(product.id)}
-            >
-              <div>
-                <MdAddShoppingCart size={16} color="#FFF" />{' '}
-                {amount[product.id] || 0}
-              </div>
-              <span>ADICIONAR AO CARRINHO</span>
-            </button>
-          </li>
-        ))}
-      </ProductList>
+                <button
+                  type="button"
+                  onClick={() => this.handleAddProduct(product)}
+                >
+                  <div>
+                    {product.loadingAddCart ? (
+                      <Spinner color="#fff" size={14} />
+                    ) : (
+                      <MdAddShoppingCart size={16} color="#FFF" />
+                    )}{' '}
+                    {amount[product.id] || 0}
+                  </div>
+                  <span>ADICIONAR AO CARRINHO</span>
+                </button>
+              </li>
+            ))}
+          </ProductList>
+        )}
+      </>
     );
   }
 }
@@ -63,6 +81,7 @@ const mapStateToProps = state => ({
 
     return amount;
   }, {}),
+  loading: false,
 });
 
 const mapDispatchToProps = dispatch =>
