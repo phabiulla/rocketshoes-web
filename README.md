@@ -3,7 +3,7 @@ Aplicação feita utilizando #reactjs, que implementa o fluxo de carrinho de com
 Durante os estudos, tive meu primeiro contato com os conceitos de #redux e #saga, além de conhecer novas
 ferramentas que auxiliam no dia a dia de um DEV.. como é o caso do #reactotron e do #jsonserver.
 
-[![Watch the video](https://cdn.pixabay.com/photo/2018/04/10/17/45/player-3308175_960_720.png)](https://youtu.be/dWmGzXFQSbE)
+[![Watch the video](https://user-images.githubusercontent.com/22889383/64163683-9df44580-ce39-11e9-8962-f728ddd9e074.PNG)](https://youtu.be/dWmGzXFQSbE)
 
 # Clone
 
