@@ -1,5 +1,5 @@
 # rocketshoes-web
-Aplicação feita utilizando #ReactJS e implementa o fluxo de carrinho de compras de um e-commerce. 
+Aplicação feita utilizando #ReactJS, que implementa o fluxo de carrinho de compras de um e-commerce. 
 Durante os estudos, tive meu primeiro contato com os conceitos de #Redux e #Saga, além de conhecer 
 novas ferramentas que auxiliam no dia a dia de um DEV.. como é o caso do #Reactotron e do #JsonServer.
 
