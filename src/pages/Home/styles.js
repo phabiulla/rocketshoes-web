@@ -1,4 +1,4 @@
-import styled, { keyframes, css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { darken } from 'polished';
 import { FaSpinner } from 'react-icons/fa';
 
